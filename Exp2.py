@@ -28,12 +28,6 @@ upper_bound = Q3 + 1.5 * IQR
 outliers = df[(df['weight'] < lower_bound) | (df['weight'] >
 upper_bound)]
 print("Weight Outliers",outliers)
-
-import pandas as pd
-from google.colab import files
-uploaded = files.upload()
-df = pd.read_csv("height.csv")
-print(df.head())
 Q1 = df['height'].quantile(0.25)
 Q3 = df['height'].quantile(0.75)
 IQR = Q3 - Q1
